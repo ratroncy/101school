@@ -6,23 +6,27 @@
 /*   By: ratroncy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 15:45:46 by ratroncy          #+#    #+#             */
-/*   Updated: 2017/11/08 15:51:34 by ratroncy         ###   ########.fr       */
+/*   Updated: 2017/11/09 19:01:37 by ratroncy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_header.h"
 #include <stdlib.h>
 
-char	ft_strdup(char *src)
+char	*ft_strdup(const char *s)
 {
 	int		i;
 	char	*dup;
 
 	i = 0;
+	while (s[i])
+		i++;
 	if (!(dup = (char*)malloc(sizeof(char) * (i + 1))))
 		return (NULL);
-	while (src[i] != '\0')
+	i = 0;
+	while (s[i] != '\0')
 	{
-		dup[i] = src[i];
+		dup[i] = s[i];
 		i++;
 	}
 	dup[i] = '\0';

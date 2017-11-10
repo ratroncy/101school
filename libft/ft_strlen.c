@@ -6,16 +6,18 @@
 /*   By: ratroncy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 15:41:45 by ratroncy          #+#    #+#             */
-/*   Updated: 2017/11/08 15:43:09 by ratroncy         ###   ########.fr       */
+/*   Updated: 2017/11/09 13:48:51 by ratroncy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(char *str)
+#include "ft_header.h"
+
+int		ft_strlen(const char *s)
 {
 	int		i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (s[i] != '\0')
 	{
 		i++;
 	}

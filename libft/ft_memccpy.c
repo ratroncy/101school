@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ratroncy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 16:20:55 by ratroncy          #+#    #+#             */
-/*   Updated: 2017/11/09 13:16:12 by ratroncy         ###   ########.fr       */
+/*   Created: 2017/11/09 16:36:39 by ratroncy          #+#    #+#             */
+/*   Updated: 2017/11/09 17:04:01 by ratroncy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_header.h"
 
-int		ft_isascii(int c)
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+	while (n--)
+	{
+		*(char *)dest++ = *(char *)src;
+		if (*(char *)src++ == c)
+			return (dest);
+	}
+	return (NULL);
 }

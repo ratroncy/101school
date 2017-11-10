@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strclr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ratroncy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 16:20:55 by ratroncy          #+#    #+#             */
-/*   Updated: 2017/11/09 13:16:12 by ratroncy         ###   ########.fr       */
+/*   Created: 2017/11/09 17:17:45 by ratroncy          #+#    #+#             */
+/*   Updated: 2017/11/09 18:52:13 by ratroncy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_header.h"
 
-int		ft_isascii(int c)
+void	ft_strclr(char *s)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+	int		i;
+	int		len;
+
+	if (!s)
+		return ;
+	i = 0;
+	len = ft_strlen(s);
+	while (i < len)
+	{
+		s[i] = '\0';
+		i++;
+	}
 }

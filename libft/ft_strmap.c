@@ -1,20 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ratroncy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 16:20:55 by ratroncy          #+#    #+#             */
-/*   Updated: 2017/11/09 13:16:12 by ratroncy         ###   ########.fr       */
+/*   Created: 2017/11/09 17:34:18 by ratroncy          #+#    #+#             */
+/*   Updated: 2017/11/10 15:44:11 by ratroncy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_header.h"
 
-int		ft_isascii(int c)
+char	*ft_strmap(const char *s, char (*f)(char))
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+	int		i;
+	char	*freshstr;
+
+	i = 0;
+	if (!s || !f)
+		return (NULL);
+	if (!(freshstr = (char *)ft_strnew(ft_strlen(s))))
+		return (NULL);
+	while (s[i] != '\0')
+	{
+		freshstr[i] = f((char)s[i]);
+		i++;
+	}
+	freshstr[i] = '\0';
+	return (freshstr);
 }

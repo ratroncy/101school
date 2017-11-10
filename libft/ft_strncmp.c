@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ratroncy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 16:20:55 by ratroncy          #+#    #+#             */
-/*   Updated: 2017/11/09 13:16:12 by ratroncy         ###   ########.fr       */
+/*   Created: 2017/09/14 19:36:21 by ratroncy          #+#    #+#             */
+/*   Updated: 2017/11/09 13:56:47 by ratroncy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_header.h"
 
-int		ft_isascii(int c)
+int		ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+	unsigned int i;
+
+	i = 0;
+	if (n == 0)
+		return (0);
+	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0' && i < n - 1)
+		i++;
+	return (s1[i] - s2[i]);
 }

@@ -1,20 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ratroncy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 16:20:55 by ratroncy          #+#    #+#             */
-/*   Updated: 2017/11/09 13:16:12 by ratroncy         ###   ########.fr       */
+/*   Created: 2017/11/10 15:49:04 by ratroncy          #+#    #+#             */
+/*   Updated: 2017/11/10 16:10:35 by ratroncy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_header.h"
 
-int		ft_isascii(int c)
+char	*ft_strtrim(const char *s)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+	int		i;
+	int		j;
+	char	*freshstr;
+
+	i = 0;
+	j = 0;
+	if (!(freshstr = (char *)ft_strnew(ft_strlen(s))))
+		return (NULL);
+	while (s[j] != '\0')
+	{
+		while (s[j] == ' ' || s[j] == ',' || s[j] == '\n' || s[j] == '\t')
+			j++;
+		while (ft_isalnum(s[j]) == 1)
+		{
+			freshstr[i] = s[j];
+			i++;
+			j++;
+		}
+		j++;
+	}
+	freshstr[i] = '\n';
+	return (freshstr);
 }

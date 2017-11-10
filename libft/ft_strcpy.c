@@ -5,13 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ratroncy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 15:51:52 by ratroncy          #+#    #+#             */
-/*   Updated: 2017/11/08 15:53:42 by ratroncy         ###   ########.fr       */
+/*   Created: 2017/09/14 10:43:50 by ratroncy          #+#    #+#             */
+/*   Updated: 2017/11/09 18:42:40 by ratroncy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	ft_strcpy(char *src, char *dest)
+char	*ft_strcpy(char *dest, char *src)
 {
-	int		i;
+	int i;
 
+	i = 0;
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }

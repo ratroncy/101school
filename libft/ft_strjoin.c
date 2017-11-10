@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ratroncy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 16:20:55 by ratroncy          #+#    #+#             */
-/*   Updated: 2017/11/09 13:16:12 by ratroncy         ###   ########.fr       */
+/*   Created: 2017/11/10 13:39:53 by ratroncy          #+#    #+#             */
+/*   Updated: 2017/11/10 14:06:37 by ratroncy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_header.h"
 
-int		ft_isascii(int c)
+char	*ft_strjoin(const char *s1, const char *s2)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+	int		len;
+	char	*freshstr;
+
+	len = ft_strlen(s1) + ft_strlen(s2);
+	if (!s1 || !s2)
+		return (NULL);
+	if (!(freshstr = (char *)ft_strnew(len)))
+		return (NULL);
+	ft_strcat(freshstr, s1);
+	ft_strcat(freshstr, s2);
+	return (freshstr);
 }

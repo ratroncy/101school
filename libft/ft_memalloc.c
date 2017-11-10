@@ -1,20 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ratroncy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 16:20:55 by ratroncy          #+#    #+#             */
-/*   Updated: 2017/11/09 13:16:12 by ratroncy         ###   ########.fr       */
+/*   Created: 2017/11/10 13:09:00 by ratroncy          #+#    #+#             */
+/*   Updated: 2017/11/10 13:34:54 by ratroncy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_header.h"
 
-int		ft_isascii(int c)
+void	*ft_memalloc(size_t size)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+	char	*memory;
+	size_t	i;
+
+	i = 0;
+	if (size > 65535)
+		return (NULL);
+	if (!(memory = (char *)malloc(sizeof(size) * i + 1)))
+		return (NULL);
+	while (i <= size)
+	{
+		memory[i] = 0;
+		i++;
+	}
+	return (memory);
 }

@@ -1,20 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ratroncy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 16:20:55 by ratroncy          #+#    #+#             */
-/*   Updated: 2017/11/09 13:16:12 by ratroncy         ###   ########.fr       */
+/*   Created: 2017/09/14 10:32:48 by ratroncy          #+#    #+#             */
+/*   Updated: 2017/11/09 18:28:06 by ratroncy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_header.h"
 
-int		ft_isascii(int c)
+int		ft_atoi(char *str)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+	int result;
+	int stock;
+	int i;
+
+	result = 0;
+	i = 0;
+	stock = 0;
+	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
+		i++;
+	if ((str[i] == '+') || (str[i] == '-'))
+	{
+		if (str[i] == '-')
+			stock++;
+		i++;
+	}
+	while ((str[i] >= '0') && (str[i] <= '9'))
+	{
+		result = result * 10 + (str[i] - 48);
+		i++;
+	}
+	if (stock > 0)
+		result = -result;
+	return (result);
 }

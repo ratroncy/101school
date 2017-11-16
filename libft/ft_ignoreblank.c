@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_ignoreblank.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ratroncy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/14 11:02:18 by ratroncy          #+#    #+#             */
-/*   Updated: 2017/11/13 13:24:25 by ratroncy         ###   ########.fr       */
+/*   Created: 2017/11/13 15:10:25 by ratroncy          #+#    #+#             */
+/*   Updated: 2017/11/13 15:14:11 by ratroncy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dest, const char *src, unsigned int n)
+size_t		ft_ignoreblank(const char *s)
 {
-	unsigned int j;
-	unsigned int i;
+	int		i;
+	int		j;
 
 	i = 0;
-	j = ft_strlen(src);
-	while (i < j && i < n)
+	j = 0;
+	while (s[i])
 	{
-		dest[i] = src[i];
+		if (s[i] != 32 && s[i] != '\n' && s[i] != '\t' && s[i] != ',')
+			j++;
 		i++;
 	}
-	while (i < n)
-		dest[i++] = '\0';
-	return (dest);
+	return (j);
 }

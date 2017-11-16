@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ratroncy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/14 11:02:18 by ratroncy          #+#    #+#             */
-/*   Updated: 2017/11/13 13:24:25 by ratroncy         ###   ########.fr       */
+/*   Created: 2017/11/13 13:39:40 by ratroncy          #+#    #+#             */
+/*   Updated: 2017/11/14 18:38:04 by ratroncy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dest, const char *src, unsigned int n)
+int		ft_strequ(const char *s1, const char *s2)
 {
-	unsigned int j;
-	unsigned int i;
-
-	i = 0;
-	j = ft_strlen(src);
-	while (i < j && i < n)
+	if (!s1 || !s2)
+		return (0);
+	while (*s1 == *s2 && (*s1 != '\0' || *s2 != '\0'))
 	{
-		dest[i] = src[i];
-		i++;
+		s1++;
+		s2++;
 	}
-	while (i < n)
-		dest[i++] = '\0';
-	return (dest);
+	if (*s1 != *s2)
+	{
+		return (0);
+	}
+	else
+		return (1);
 }

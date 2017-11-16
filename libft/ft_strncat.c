@@ -6,11 +6,11 @@
 /*   By: ratroncy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/15 18:19:41 by ratroncy          #+#    #+#             */
-/*   Updated: 2017/11/09 13:56:19 by ratroncy         ###   ########.fr       */
+/*   Updated: 2017/11/14 18:11:25 by ratroncy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_header.h"
+#include "libft.h"
 
 char	*ft_strncat(char *dest, char *src, int nb)
 {
@@ -19,9 +19,9 @@ char	*ft_strncat(char *dest, char *src, int nb)
 
 	i = 0;
 	j = 0;
-	while (dest[i] != '\0')
+	while (dest[i])
 		i++;
-	while ((src[j] != '\0') && (j < nb))
+	while (src[j] && j < nb)
 	{
 		dest[i] = src[j];
 		i++;

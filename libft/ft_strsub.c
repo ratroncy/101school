@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ratroncy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/14 11:02:18 by ratroncy          #+#    #+#             */
-/*   Updated: 2017/11/13 13:24:25 by ratroncy         ###   ########.fr       */
+/*   Created: 2017/11/13 10:59:20 by ratroncy          #+#    #+#             */
+/*   Updated: 2017/11/13 15:44:58 by ratroncy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dest, const char *src, unsigned int n)
+char	*ft_strsub(const char *s, unsigned int start, size_t len)
 {
-	unsigned int j;
-	unsigned int i;
+	size_t	i;
+	char	*str_len;
 
+	if (!s)
+		return (NULL);
+	if (!(str_len = (char *)ft_strnew(len)))
+		return (NULL);
 	i = 0;
-	j = ft_strlen(src);
-	while (i < j && i < n)
+	while (i < len)
 	{
-		dest[i] = src[i];
+		str_len[i] = s[start + i];
 		i++;
 	}
-	while (i < n)
-		dest[i++] = '\0';
-	return (dest);
+	str_len[i] = '\0';
+	return (str_len);
 }

@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ratroncy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/14 11:02:18 by ratroncy          #+#    #+#             */
-/*   Updated: 2017/11/13 13:24:25 by ratroncy         ###   ########.fr       */
+/*   Created: 2017/11/16 13:47:34 by ratroncy          #+#    #+#             */
+/*   Updated: 2017/11/16 13:47:37 by ratroncy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dest, const char *src, unsigned int n)
-{
-	unsigned int j;
-	unsigned int i;
+char	*ft_strrev(char *s)
+{	
+	size_t	i;
+	size_t	j;
+	char	*rev;
 
-	i = 0;
-	j = ft_strlen(src);
-	while (i < j && i < n)
+	i = ft_strlen(s);
+	j = 0;
+	if (!(rev = (char*)malloc(sizeof(char) * (i + 1))))
+		return (NULL);
+	rev[i] = '\0';
+	while (i-- > 0)
 	{
-		dest[i] = src[i];
-		i++;
+		rev[i] = s[j];
+		j++;
 	}
-	while (i < n)
-		dest[i++] = '\0';
-	return (dest);
+	return (rev);
 }

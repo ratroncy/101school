@@ -10,11 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_header.h"
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
+	void	*mem;
+
+	mem = dest;
 	while (n--)
-		*((char *)dest + n) = *((char *)src + n);
-	return (dest);
+		*(unsigned char *)dest++ = *(unsigned char *)src++;
+	return (mem);
 }

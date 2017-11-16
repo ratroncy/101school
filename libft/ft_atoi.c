@@ -6,11 +6,11 @@
 /*   By: ratroncy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/14 10:32:48 by ratroncy          #+#    #+#             */
-/*   Updated: 2017/11/09 18:28:06 by ratroncy         ###   ########.fr       */
+/*   Updated: 2017/11/14 18:45:44 by ratroncy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_header.h"
+#include "libft.h"
 
 int		ft_atoi(char *str)
 {

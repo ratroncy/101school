@@ -6,32 +6,32 @@
 /*   By: ratroncy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 14:55:38 by ratroncy          #+#    #+#             */
-/*   Updated: 2017/11/09 15:20:24 by ratroncy         ###   ########.fr       */
+/*   Updated: 2017/11/14 17:12:49 by ratroncy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_header.h"
+#include "libft.h"
 
-char	*ft_strnstr(char *str, char *to_find, unsigned int n)
+char	*ft_strnstr(const char *big, const char *little, size_t n)
 {
-	unsigned int i;
-	unsigned int j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
-	if (to_find[0] == '\0')
-		return (str);
-	while (str[i] != '\0')
+	if (little[0] == '\0')
+		return ((char *)big);
+	while (big[i] != '\0')
 	{
 		j = 0;
-		while (to_find[j] == str[i + j] && j < n)
+		while (little[j] == big[i + j] && n-- != 0)
 		{
-			if (to_find[j + 1] == '\0')
+			if (little[j + 1] == '\0')
 			{
-				return (str + i);
+				return ((char *)big + i);
 			}
 			j++;
 		}
 		i++;
 	}
-	return (0);
+	return (NULL);
 }

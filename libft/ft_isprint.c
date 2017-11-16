@@ -6,15 +6,15 @@
 /*   By: ratroncy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/15 14:59:21 by ratroncy          #+#    #+#             */
-/*   Updated: 2017/11/09 13:52:20 by ratroncy         ###   ########.fr       */
+/*   Updated: 2017/11/13 13:34:31 by ratroncy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_header.h"
+#include "libft.h"
 
 int		ft_isprint(int c)
 {
-	if (c < 32 || c == 127)
-		return (0);
-	return (1);
+	if (c >= 32 && c <= 126)
+		return (1);
+	return (0);
 }

@@ -5,17 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ratroncy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 15:53:53 by ratroncy          #+#    #+#             */
-/*   Updated: 2017/11/08 16:01:13 by ratroncy         ###   ########.fr       */
+/*   Created: 2017/11/15 11:19:44 by ratroncy          #+#    #+#             */
+/*   Updated: 2017/11/15 11:38:34 by ratroncy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-void	*memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	int		i;
-
-	i = 0;
-	while ()
+	while (n--)
+		*((char *)s + n) = (unsigned char)c;
+	return (s);
 }

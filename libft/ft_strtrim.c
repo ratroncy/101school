@@ -6,34 +6,36 @@
 /*   By: ratroncy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 15:49:04 by ratroncy          #+#    #+#             */
-/*   Updated: 2017/11/10 16:10:35 by ratroncy         ###   ########.fr       */
+/*   Updated: 2017/11/13 16:13:13 by ratroncy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_header.h"
+#include "libft.h"
 
 char	*ft_strtrim(const char *s)
 {
-	int		i;
-	int		j;
-	char	*freshstr;
+	size_t	i;
+	size_t	begin;
+	size_t	end;
+	char	*str;
 
-	i = 0;
-	j = 0;
-	if (!(freshstr = (char *)ft_strnew(ft_strlen(s))))
+	if (!s)
 		return (NULL);
-	while (s[j] != '\0')
-	{
-		while (s[j] == ' ' || s[j] == ',' || s[j] == '\n' || s[j] == '\t')
-			j++;
-		while (ft_isalnum(s[j]) == 1)
-		{
-			freshstr[i] = s[j];
-			i++;
-			j++;
-		}
-		j++;
-	}
-	freshstr[i] = '\n';
-	return (freshstr);
+	i = 0;
+	while (s[i] && (s[i] == ' ' || s[i] == '\t' || s[i] == '\n'))
+		i++;
+	if (!s[i])
+		return (ft_strnew(0));
+	begin = i;
+	while (s[i])
+		i++;
+	i--;
+	while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n')
+		i--;
+	end = i + 1;
+	str = ft_strnew(end - begin);
+	if (!str)
+		return (NULL);
+	ft_strncpy(str, &s[begin], end - begin);
+	return (str);
 }

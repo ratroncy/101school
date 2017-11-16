@@ -1,30 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ratroncy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/14 11:02:18 by ratroncy          #+#    #+#             */
-/*   Updated: 2017/11/13 13:24:25 by ratroncy         ###   ########.fr       */
+/*   Created: 2017/11/13 15:09:29 by ratroncy          #+#    #+#             */
+/*   Updated: 2017/11/13 18:05:22 by ratroncy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dest, const char *src, unsigned int n)
+char			**ft_strsplit(char const *s, char c)
 {
-	unsigned int j;
-	unsigned int i;
+	size_t		k;
+	size_t		j;
+	size_t		i;
+	char		**ret;
 
 	i = 0;
-	j = ft_strlen(src);
-	while (i < j && i < n)
+	j = 0;
+	if (!s || !c || !(ret = (char **)ft_memalloc(sizeof(char *) *
+					(ft_strlen(s) + 1))))
+		return (NULL);
+	while (s[i] != '\0')
 	{
-		dest[i] = src[i];
-		i++;
+		if (s[i] == c)
+			i++;
+		else
+		{
+			k = 0;
+			while (s[i + k] != '\0' && s[i + k] != c)
+				k++;
+			ret[j++] = ft_strsub(s, i, k);
+			i += k;
+		}
 	}
-	while (i < n)
-		dest[i++] = '\0';
-	return (dest);
+	ret[j] = 0;
+	return (ret);
 }

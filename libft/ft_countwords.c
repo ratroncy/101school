@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_countwords.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ratroncy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/14 11:02:18 by ratroncy          #+#    #+#             */
-/*   Updated: 2017/11/13 13:24:25 by ratroncy         ###   ########.fr       */
+/*   Created: 2017/11/13 16:17:53 by ratroncy          #+#    #+#             */
+/*   Updated: 2017/11/13 17:19:45 by ratroncy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dest, const char *src, unsigned int n)
+size_t	ft_countwords(const char *s, int c)
 {
-	unsigned int j;
-	unsigned int i;
+	int		i;
+	int		words;
 
 	i = 0;
-	j = ft_strlen(src);
-	while (i < j && i < n)
+	words = 0;
+	if (s[i] != c)
+		words++;
+	while (s[i])
 	{
-		dest[i] = src[i];
+		if (s[i] == c && (s[i + 1] != c && s[i + 1] != '\0'))
+			words++;
 		i++;
 	}
-	while (i < n)
-		dest[i++] = '\0';
-	return (dest);
+	return (words);
 }

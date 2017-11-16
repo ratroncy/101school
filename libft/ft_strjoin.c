@@ -6,20 +6,20 @@
 /*   By: ratroncy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 13:39:53 by ratroncy          #+#    #+#             */
-/*   Updated: 2017/11/10 14:06:37 by ratroncy         ###   ########.fr       */
+/*   Updated: 2017/11/13 13:29:49 by ratroncy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_header.h"
+#include "libft.h"
 
 char	*ft_strjoin(const char *s1, const char *s2)
 {
 	int		len;
 	char	*freshstr;
 
-	len = ft_strlen(s1) + ft_strlen(s2);
 	if (!s1 || !s2)
 		return (NULL);
+	len = ft_strlen(s1) + ft_strlen(s2);
 	if (!(freshstr = (char *)ft_strnew(len)))
 		return (NULL);
 	ft_strcat(freshstr, s1);

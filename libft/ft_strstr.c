@@ -6,11 +6,11 @@
 /*   By: ratroncy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 11:37:29 by ratroncy          #+#    #+#             */
-/*   Updated: 2017/11/09 14:33:06 by ratroncy         ###   ########.fr       */
+/*   Updated: 2017/11/13 18:49:27 by ratroncy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_header.h"
+#include "libft.h"
 
 char	*ft_strstr(char *str, char *to_find)
 {
@@ -33,5 +33,5 @@ char	*ft_strstr(char *str, char *to_find)
 		}
 		i++;
 	}
-	return (0);
+	return (NULL);
 }

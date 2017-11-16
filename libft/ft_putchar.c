@@ -6,14 +6,13 @@
 /*   By: ratroncy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 13:41:39 by ratroncy          #+#    #+#             */
-/*   Updated: 2017/11/09 13:52:32 by ratroncy         ###   ########.fr       */
+/*   Updated: 2017/11/14 18:37:20 by ratroncy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_header.h"
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putchar(char c)
 {
-	write (1, &c, 1);
+	write(1, &c, 1);
 }

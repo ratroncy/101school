@@ -6,7 +6,7 @@
 /*   By: ratroncy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 11:37:29 by ratroncy          #+#    #+#             */
-/*   Updated: 2017/11/13 18:49:27 by ratroncy         ###   ########.fr       */
+/*   Updated: 2017/11/20 11:10:05 by ratroncy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strstr(char *str, char *to_find)
 {
-	int i;
-	int j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	if (to_find[0] == '\0')

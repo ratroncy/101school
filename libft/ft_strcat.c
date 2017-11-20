@@ -6,7 +6,7 @@
 /*   By: ratroncy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/15 15:25:52 by ratroncy          #+#    #+#             */
-/*   Updated: 2017/11/10 13:59:50 by ratroncy         ###   ########.fr       */
+/*   Updated: 2017/11/20 11:07:31 by ratroncy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strcat(char *dest, const char *src)
 {
-	int i;
-	int j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = 0;

@@ -6,7 +6,7 @@
 /*   By: ratroncy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 15:10:25 by ratroncy          #+#    #+#             */
-/*   Updated: 2017/11/13 15:14:11 by ratroncy         ###   ########.fr       */
+/*   Updated: 2017/11/20 11:05:35 by ratroncy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 size_t		ft_ignoreblank(const char *s)
 {
-	int		i;
-	int		j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = 0;

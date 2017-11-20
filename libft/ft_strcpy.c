@@ -6,7 +6,7 @@
 /*   By: ratroncy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/14 10:43:50 by ratroncy          #+#    #+#             */
-/*   Updated: 2017/11/09 18:42:40 by ratroncy         ###   ########.fr       */
+/*   Updated: 2017/11/20 11:08:10 by ratroncy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strcpy(char *dest, const char *src)
 {
-	int i;
+	size_t	i;
 
 	i = 0;
 	while (src[i] != '\0')

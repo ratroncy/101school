@@ -6,7 +6,7 @@
 /*   By: ratroncy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/14 10:17:54 by ratroncy          #+#    #+#             */
-/*   Updated: 2017/11/09 18:53:47 by ratroncy         ###   ########.fr       */
+/*   Updated: 2017/11/20 11:07:11 by ratroncy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr(const char *s)
 {
-	int i;
+	size_t	i;
 
 	if (!s)
 		return ;

@@ -6,7 +6,7 @@
 /*   By: ratroncy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 17:34:18 by ratroncy          #+#    #+#             */
-/*   Updated: 2017/11/10 15:44:11 by ratroncy         ###   ########.fr       */
+/*   Updated: 2017/11/20 11:09:05 by ratroncy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strmap(const char *s, char (*f)(char))
 {
-	int		i;
+	size_t	i;
 	char	*freshstr;
 
 	i = 0;

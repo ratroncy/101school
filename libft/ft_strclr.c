@@ -6,7 +6,7 @@
 /*   By: ratroncy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 17:17:45 by ratroncy          #+#    #+#             */
-/*   Updated: 2017/11/09 18:52:13 by ratroncy         ###   ########.fr       */
+/*   Updated: 2017/11/20 11:07:56 by ratroncy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_strclr(char *s)
 {
-	int		i;
-	int		len;
+	size_t	i;
+	size_t	len;
 
 	if (!s)
 		return ;

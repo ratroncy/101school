@@ -6,7 +6,7 @@
 /*   By: ratroncy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 18:18:55 by ratroncy          #+#    #+#             */
-/*   Updated: 2017/11/09 18:54:10 by ratroncy         ###   ########.fr       */
+/*   Updated: 2017/11/20 11:06:48 by ratroncy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putendl(const char *s)
 {
-	int		i;
+	size_t	i;
 
 	if (!s)
 		return ;

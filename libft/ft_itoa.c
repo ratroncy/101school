@@ -6,7 +6,7 @@
 /*   By: ratroncy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 18:50:58 by ratroncy          #+#    #+#             */
-/*   Updated: 2017/11/14 18:35:10 by ratroncy         ###   ########.fr       */
+/*   Updated: 2017/11/20 11:15:02 by ratroncy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ static void		ft_is_negative(int *n, int *negative)
 
 char			*ft_itoa(int n)
 {
-	int			mem;
-	int			i;
-	int			isneg;
-	char		*str;
+	int		mem;
+	int		i;
+	int		isneg;
+	char	*str;
 
 	mem = n;
 	i = 2;

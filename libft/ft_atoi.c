@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ratroncy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/14 10:32:48 by ratroncy          #+#    #+#             */
-/*   Updated: 2017/11/14 18:45:44 by ratroncy         ###   ########.fr       */
+/*   Created: 2017/11/17 16:32:52 by ratroncy          #+#    #+#             */
+/*   Updated: 2017/11/20 11:04:47 by ratroncy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int		ft_atoi(char *str)
 {
-	int result;
-	int stock;
-	int i;
+	size_t	result;
+	size_t	stock;
+	size_t	i;
 
 	result = 0;
 	i = 0;

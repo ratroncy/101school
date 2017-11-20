@@ -6,7 +6,7 @@
 /*   By: ratroncy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 17:27:23 by ratroncy          #+#    #+#             */
-/*   Updated: 2017/11/14 18:38:45 by ratroncy         ###   ########.fr       */
+/*   Updated: 2017/11/20 11:08:38 by ratroncy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	int		i;
+	size_t	i;
 
 	if (!s || !f)
 		return ;

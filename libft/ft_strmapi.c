@@ -6,7 +6,7 @@
 /*   By: ratroncy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 18:11:55 by ratroncy          #+#    #+#             */
-/*   Updated: 2017/11/10 15:45:03 by ratroncy         ###   ########.fr       */
+/*   Updated: 2017/11/20 11:09:11 by ratroncy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 {
-	int		i;
+	size_t	i;
 	char	*freshstr;
 
 	i = 0;

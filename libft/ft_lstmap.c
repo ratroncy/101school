@@ -12,21 +12,16 @@
 
 #include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, t_list * (*f)(t_list *elem))
+t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
 	t_list	*newlst;
-	t_list	*tmp;
 
-	newlst = NULL;
-	tmp = newlst;
-	if (!(newlst = ft_memalloc(lst->content_size)))
+	if (!lst || !f)
 		return (NULL);
-	while (lst)
-	{
-		newlst = f(lst);
-		newlst = newlst->next;
-		lst = lst->next;
-	}
-	lst->next = NULL;
-	return (tmp);
+	if (!(newlst = (t_list *)malloc(sizeof(newlst))))
+		return (NULL);
+	newlst = f(lst);
+	if (lst->next)
+		newlst->next = ft_lstmap(lst->next, f);
+	return (newlst);
 }

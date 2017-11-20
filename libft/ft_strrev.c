@@ -6,14 +6,14 @@
 /*   By: ratroncy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/16 13:47:34 by ratroncy          #+#    #+#             */
-/*   Updated: 2017/11/16 13:47:37 by ratroncy         ###   ########.fr       */
+/*   Updated: 2017/11/17 16:35:40 by ratroncy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 char	*ft_strrev(char *s)
-{	
+{
 	size_t	i;
 	size_t	j;
 	char	*rev;

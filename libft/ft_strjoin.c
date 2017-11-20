@@ -6,7 +6,7 @@
 /*   By: ratroncy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 13:39:53 by ratroncy          #+#    #+#             */
-/*   Updated: 2017/11/13 13:29:49 by ratroncy         ###   ########.fr       */
+/*   Updated: 2017/11/20 11:08:48 by ratroncy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strjoin(const char *s1, const char *s2)
 {
-	int		len;
+	size_t	len;
 	char	*freshstr;
 
 	if (!s1 || !s2)

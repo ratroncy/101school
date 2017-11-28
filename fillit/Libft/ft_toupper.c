@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strdup.c                                      .::    .:/ .      .::   */
+/*   ft_toupper.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: ratroncy <marvin@101.fr>                   +:+   +:    +:    +:+     */
+/*   By: lelajour <lelajour@student.42.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2017/11/23 12:22:05 by ratroncy     #+#   ##    ##    #+#       */
-/*   Updated: 2017/11/27 14:12:43 by ratroncy    ###    #+. /#+    ###.fr     */
+/*   Created: 2017/11/13 17:56:50 by lelajour     #+#   ##    ##    #+#       */
+/*   Updated: 2017/11/23 14:08:12 by lelajour    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
-
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+int		ft_toupper(int c)
 {
-	char	*dup;
-
-	if (!(dup = (char*)malloc(sizeof(char) * (ft_strlen(s) + 1))))
-		return (NULL);
-	ft_strcpy(dup, s);
-	return (dup);
+	if (c > 96 && c < 123)
+	{
+		c -= 32;
+		return (c);
+	}
+	return (c);
 }

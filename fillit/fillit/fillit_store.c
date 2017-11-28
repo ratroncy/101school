@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strdup.c                                      .::    .:/ .      .::   */
+/*   fillit_store.c                                   .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: ratroncy <marvin@101.fr>                   +:+   +:    +:    +:+     */
+/*   By: lelajour <lelajour@student.42.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2017/11/23 12:22:05 by ratroncy     #+#   ##    ##    #+#       */
-/*   Updated: 2017/11/27 14:12:43 by ratroncy    ###    #+. /#+    ###.fr     */
+/*   Created: 2017/11/24 09:35:37 by lelajour     #+#   ##    ##    #+#       */
+/*   Updated: 2017/11/24 10:19:08 by lelajour    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "fillit.h"
 
-char	*ft_strdup(const char *s)
+char **fillit_store(int fd)
 {
-	char	*dup;
+	char str[];
 
-	if (!(dup = (char*)malloc(sizeof(char) * (ft_strlen(s) + 1))))
-		return (NULL);
-	ft_strcpy(dup, s);
-	return (dup);
+	read(fd, str, BUFF_SIZE + 1);
+	
 }

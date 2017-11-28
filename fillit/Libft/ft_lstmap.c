@@ -1,24 +1,36 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strdup.c                                      .::    .:/ .      .::   */
+/*   ft_lstmap.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: ratroncy <marvin@101.fr>                   +:+   +:    +:    +:+     */
+/*   By: lelajour <lelajour@student.42.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2017/11/23 12:22:05 by ratroncy     #+#   ##    ##    #+#       */
-/*   Updated: 2017/11/27 14:12:43 by ratroncy    ###    #+. /#+    ###.fr     */
+/*   Created: 2017/11/15 17:07:16 by lelajour     #+#   ##    ##    #+#       */
+/*   Updated: 2017/11/23 14:06:58 by lelajour    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
-
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	char	*dup;
+	t_list	*new_l;
+	t_list	*tmp_l;
 
-	if (!(dup = (char*)malloc(sizeof(char) * (ft_strlen(s) + 1))))
-		return (NULL);
-	ft_strcpy(dup, s);
-	return (dup);
+	new_l = NULL;
+	tmp_l = NULL;
+	if (lst && f)
+	{
+		new_l = f(lst);
+		tmp_l = new_l;
+		while (lst->next != NULL)
+		{
+			lst = lst->next;
+			if (!(tmp_l->next = f(lst)))
+				return (NULL);
+			tmp_l = tmp_l->next;
+		}
+		return (new_l);
+	}
+	return (NULL);
 }

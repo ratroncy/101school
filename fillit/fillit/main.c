@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strdup.c                                      .::    .:/ .      .::   */
+/*   main.c                                           .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: ratroncy <marvin@101.fr>                   +:+   +:    +:    +:+     */
+/*   By: lelajour <lelajour@student.42.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2017/11/23 12:22:05 by ratroncy     #+#   ##    ##    #+#       */
-/*   Updated: 2017/11/27 14:12:43 by ratroncy    ###    #+. /#+    ###.fr     */
+/*   Created: 2017/11/23 14:04:56 by lelajour     #+#   ##    ##    #+#       */
+/*   Updated: 2017/11/24 11:57:05 by lelajour    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "fillit.h"
 
-char	*ft_strdup(const char *s)
+int		main(int ac, char **av)
 {
-	char	*dup;
+	int		nb_tetri;
 
-	if (!(dup = (char*)malloc(sizeof(char) * (ft_strlen(s) + 1))))
-		return (NULL);
-	ft_strcpy(dup, s);
-	return (dup);
+	nb_tetri = 0;
+	if (ac != 2)
+	{
+		ft_putendl("usage: fillit tetriminos(.txt)");
+		exit(TRUE);
+	}
+	else if (!(nb_tetri = fillit_check_file(av[1])))
+		ft_fail();
+	if (l_check(av[1]) != TRUE)
+		ft_fail();
+	ft_putnbr(nb_tetri);
+	return (0);
 }

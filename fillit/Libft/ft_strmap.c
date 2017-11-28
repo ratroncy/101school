@@ -1,24 +1,33 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strdup.c                                      .::    .:/ .      .::   */
+/*   ft_strmap.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: ratroncy <marvin@101.fr>                   +:+   +:    +:    +:+     */
+/*   By: lelajour <lelajour@student.42.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2017/11/23 12:22:05 by ratroncy     #+#   ##    ##    #+#       */
-/*   Updated: 2017/11/27 14:12:43 by ratroncy    ###    #+. /#+    ###.fr     */
+/*   Created: 2017/11/13 17:54:50 by lelajour     #+#   ##    ##    #+#       */
+/*   Updated: 2017/11/23 14:07:27 by lelajour    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
-
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+char	*ft_strmap(const char *s, char (*f) (char))
 {
-	char	*dup;
+	char	*str;
+	size_t	a;
 
-	if (!(dup = (char*)malloc(sizeof(char) * (ft_strlen(s) + 1))))
-		return (NULL);
-	ft_strcpy(dup, s);
-	return (dup);
+	a = 0;
+	str = NULL;
+	if (s)
+	{
+		if (!(str = ft_strnew(ft_strlen((char*)s))))
+			return (NULL);
+		while (s[a])
+		{
+			str[a] = f(s[a]);
+			a++;
+		}
+	}
+	return (str);
 }

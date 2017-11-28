@@ -1,24 +1,30 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strdup.c                                      .::    .:/ .      .::   */
+/*   ft_memcpy.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: ratroncy <marvin@101.fr>                   +:+   +:    +:    +:+     */
+/*   By: lelajour <lelajour@student.42.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2017/11/23 12:22:05 by ratroncy     #+#   ##    ##    #+#       */
-/*   Updated: 2017/11/27 14:12:43 by ratroncy    ###    #+. /#+    ###.fr     */
+/*   Created: 2017/11/13 17:50:49 by lelajour     #+#   ##    ##    #+#       */
+/*   Updated: 2017/11/23 14:07:03 by lelajour    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
-
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+void	*ft_memcpy(void *dest, void *src, size_t n)
 {
-	char	*dup;
+	unsigned char	*dest_tmp;
+	unsigned char	*src_tmp;
+	unsigned int	i;
 
-	if (!(dup = (char*)malloc(sizeof(char) * (ft_strlen(s) + 1))))
-		return (NULL);
-	ft_strcpy(dup, s);
-	return (dup);
+	dest_tmp = dest;
+	src_tmp = src;
+	i = 0;
+	while (n-- != 0)
+	{
+		dest_tmp[i] = src_tmp[i];
+		i++;
+	}
+	return ((void*)dest);
 }

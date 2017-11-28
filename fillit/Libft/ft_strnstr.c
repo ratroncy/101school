@@ -1,24 +1,39 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strdup.c                                      .::    .:/ .      .::   */
+/*   ft_strnstr.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: ratroncy <marvin@101.fr>                   +:+   +:    +:    +:+     */
+/*   By: lelajour <lelajour@student.42.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2017/11/23 12:22:05 by ratroncy     #+#   ##    ##    #+#       */
-/*   Updated: 2017/11/27 14:12:43 by ratroncy    ###    #+. /#+    ###.fr     */
+/*   Created: 2017/11/13 17:55:48 by lelajour     #+#   ##    ##    #+#       */
+/*   Updated: 2017/11/23 14:07:34 by lelajour    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
-
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+char	*ft_strnstr(const char *htack, const char *ndle, size_t n)
 {
-	char	*dup;
+	int a;
+	int b;
+	int c;
 
-	if (!(dup = (char*)malloc(sizeof(char) * (ft_strlen(s) + 1))))
-		return (NULL);
-	ft_strcpy(dup, s);
-	return (dup);
+	a = 0;
+	b = 0;
+	if (ndle[b] == '\0')
+		return ((char*)htack);
+	while (htack[a])
+	{
+		c = a;
+		while ((htack[c] == ndle[b]) && c < (int)n)
+		{
+			if (ndle[b + 1] == '\0')
+				return ((char*)&htack[a]);
+			b++;
+			c++;
+		}
+		b = 0;
+		a++;
+	}
+	return (NULL);
 }

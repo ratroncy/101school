@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strdup.c                                      .::    .:/ .      .::   */
+/*   ft_atoi.c                                        .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: ratroncy <marvin@101.fr>                   +:+   +:    +:    +:+     */
+/*   By: lelajour <lelajour@student.42.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2017/11/23 12:22:05 by ratroncy     #+#   ##    ##    #+#       */
-/*   Updated: 2017/11/27 14:12:43 by ratroncy    ###    #+. /#+    ###.fr     */
+/*   Created: 2017/11/13 17:48:03 by lelajour     #+#   ##    ##    #+#       */
+/*   Updated: 2017/11/23 14:06:47 by lelajour    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
-
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+int		ft_atoi(const char *str)
 {
-	char	*dup;
+	int	a;
+	int	pos;
+	int	nb;
 
-	if (!(dup = (char*)malloc(sizeof(char) * (ft_strlen(s) + 1))))
-		return (NULL);
-	ft_strcpy(dup, s);
-	return (dup);
+	a = 0;
+	pos = 1;
+	nb = 0;
+	while ((str[a] >= 9 && str[a] <= 13) || str[a] == ' ')
+		a++;
+	if (str[a] == '+' || str[a] == '-')
+		if (str[a++] == '-')
+			pos = -1;
+	while (str[a] && (str[a] >= '0' && str[a] <= '9'))
+		nb = (nb * 10) + (str[a++] - '0');
+	return ((int)nb * (int)pos);
 }

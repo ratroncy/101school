@@ -6,10 +6,11 @@
 /*   By: lelajour <lelajour@student.42.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/11/13 17:54:50 by lelajour     #+#   ##    ##    #+#       */
-/*   Updated: 2017/11/23 14:07:27 by lelajour    ###    #+. /#+    ###.fr     */
+/*   Updated: 2017/11/29 12:33:59 by lelajour    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strmap(const char *s, char (*f) (char))

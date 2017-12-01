@@ -6,10 +6,11 @@
 /*   By: lelajour <lelajour@student.42.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/11/13 17:54:17 by lelajour     #+#   ##    ##    #+#       */
-/*   Updated: 2017/11/23 14:07:24 by lelajour    ###    #+. /#+    ###.fr     */
+/*   Updated: 2017/11/29 12:33:18 by lelajour    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))

@@ -6,10 +6,11 @@
 /*   By: lelajour <lelajour@student.42.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/11/13 17:51:08 by lelajour     #+#   ##    ##    #+#       */
-/*   Updated: 2017/11/23 14:07:05 by lelajour    ###    #+. /#+    ###.fr     */
+/*   Updated: 2017/11/29 12:32:06 by lelajour    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)

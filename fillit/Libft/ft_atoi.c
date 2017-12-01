@@ -6,10 +6,11 @@
 /*   By: lelajour <lelajour@student.42.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/11/13 17:48:03 by lelajour     #+#   ##    ##    #+#       */
-/*   Updated: 2017/11/23 14:06:47 by lelajour    ###    #+. /#+    ###.fr     */
+/*   Updated: 2017/11/29 12:30:38 by lelajour    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 int		ft_atoi(const char *str)

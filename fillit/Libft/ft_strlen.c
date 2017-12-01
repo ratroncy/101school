@@ -6,10 +6,11 @@
 /*   By: lelajour <lelajour@student.42.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/11/13 17:54:40 by lelajour     #+#   ##    ##    #+#       */
-/*   Updated: 2017/11/23 14:07:26 by lelajour    ###    #+. /#+    ###.fr     */
+/*   Updated: 2017/11/29 12:33:53 by lelajour    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 size_t		ft_strlen(const char *str)

@@ -6,10 +6,11 @@
 /*   By: lelajour <lelajour@student.42.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/11/13 17:50:12 by lelajour     #+#   ##    ##    #+#       */
-/*   Updated: 2017/11/23 14:06:53 by lelajour    ###    #+. /#+    ###.fr     */
+/*   Updated: 2017/11/29 12:31:10 by lelajour    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 static int	lenght_c(long int c)

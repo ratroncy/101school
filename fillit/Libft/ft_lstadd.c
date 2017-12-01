@@ -6,10 +6,11 @@
 /*   By: lelajour <lelajour@student.42.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/11/15 16:22:36 by lelajour     #+#   ##    ##    #+#       */
-/*   Updated: 2017/11/23 14:06:54 by lelajour    ###    #+. /#+    ###.fr     */
+/*   Updated: 2017/11/29 12:31:15 by lelajour    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	ft_lstadd(t_list **alst, t_list *new)

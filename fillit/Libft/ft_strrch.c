@@ -6,10 +6,11 @@
 /*   By: lelajour <lelajour@student.42.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/11/13 17:55:55 by lelajour     #+#   ##    ##    #+#       */
-/*   Updated: 2017/11/23 14:07:35 by lelajour    ###    #+. /#+    ###.fr     */
+/*   Updated: 2017/11/29 12:34:28 by lelajour    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strrch(const char *s, int c)

@@ -6,10 +6,11 @@
 /*   By: lelajour <lelajour@student.42.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/11/13 17:53:38 by lelajour     #+#   ##    ##    #+#       */
-/*   Updated: 2017/11/23 14:07:20 by lelajour    ###    #+. /#+    ###.fr     */
+/*   Updated: 2017/11/29 12:33:03 by lelajour    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	ft_strdel(char **as)

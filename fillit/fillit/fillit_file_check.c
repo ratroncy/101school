@@ -6,7 +6,7 @@
 /*   By: lelajour <lelajour@student.42.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/11/23 11:42:21 by lelajour     #+#   ##    ##    #+#       */
-/*   Updated: 2017/11/24 17:12:18 by lelajour    ###    #+. /#+    ###.fr     */
+/*   Updated: 2017/11/29 14:00:48 by lelajour    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -35,12 +35,10 @@ static int	check_tetri(char **tab)
 			s++;
 		}
 		if (s != 4)
-			return(TRUE);
+			return (TRUE);
 		i++;
 	}
-	if (nb_h != nb_tetri * 4)
-		return(TRUE);
-	return (nb_tetri);
+	return (nb_h == nb_tetri * 4 ? nb_tetri : TRUE);
 }
 
 static int	check_tfile(char **tab)
@@ -88,7 +86,7 @@ static	int	fillit_read(char str[BUFF_SIZE + 1])
 int			fillit_check_file(char *file)
 {
 	char	str[BUFF_SIZE + 1];
-	int 	fd;
+	int		fd;
 	char	**tab;
 	int		nb_tetri;
 

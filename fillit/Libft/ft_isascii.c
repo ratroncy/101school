@@ -6,10 +6,11 @@
 /*   By: lelajour <lelajour@student.42.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/11/13 17:48:42 by lelajour     #+#   ##    ##    #+#       */
-/*   Updated: 2017/11/23 14:06:51 by lelajour    ###    #+. /#+    ###.fr     */
+/*   Updated: 2017/11/29 12:31:01 by lelajour    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 int		ft_isascii(int c)

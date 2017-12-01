@@ -6,10 +6,11 @@
 /*   By: lelajour <lelajour@student.42.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/11/13 17:54:00 by lelajour     #+#   ##    ##    #+#       */
-/*   Updated: 2017/11/23 14:07:21 by lelajour    ###    #+. /#+    ###.fr     */
+/*   Updated: 2017/11/29 12:33:12 by lelajour    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 int		ft_strequ(const char *s1, const char *s2)

@@ -6,10 +6,11 @@
 /*   By: lelajour <lelajour@student.42.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/11/13 17:56:43 by lelajour     #+#   ##    ##    #+#       */
-/*   Updated: 2017/11/23 14:08:12 by lelajour    ###    #+. /#+    ###.fr     */
+/*   Updated: 2017/11/29 12:35:15 by lelajour    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 int		ft_tolower(int c)

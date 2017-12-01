@@ -6,7 +6,7 @@
 /*   By: lelajour <lelajour@student.42.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/11/27 09:44:21 by lelajour     #+#   ##    ##    #+#       */
-/*   Updated: 2017/11/27 11:21:43 by lelajour    ###    #+. /#+    ###.fr     */
+/*   Updated: 2017/11/27 16:26:27 by lelajour    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -39,24 +39,6 @@ static int	valid_tetri(char *str)
 		return (TRUE);
 	return (FALSE);
 }
-
-/*void	sort_tetri(char *str)
-{
-	int i;
-	char **tab;
-
-	i = 0;
-	if (valid_tetri(str) == 8)
-	{
-		if (!(tab = (char**)malloc(sizeof(char*) * 4)))
-			return (NULL);
-
-	}
-	while (str[i])
-	{
-
-	}
-}*/
 
 int			l_check(char *str)
 {

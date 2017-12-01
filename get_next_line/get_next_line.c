@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   get_next_line.c                                  .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: ratroncy <marvin@101.fr>                   +:+   +:    +:    +:+     */
+/*   By: ratroncy <ratroncy@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2017/11/28 13:05:56 by ratroncy     #+#   ##    ##    #+#       */
-/*   Updated: 2017/11/28 16:21:56 by ratroncy    ###    #+. /#+    ###.fr     */
+/*   Created: 2017/11/30 12:27:29 by ratroncy     #+#   ##    ##    #+#       */
+/*   Updated: 2017/12/01 16:07:46 by ratroncy    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,26 +15,27 @@
 
 int		get_next_line(const int fd, char **line)
 {
-	int		ret;
-	char	*buf = "";
+	int			ret;
+	char		buf[BUFF_SIZE + 1];
 
 	(void)line;
-	while (*buf != '\n')
-		ret = read(fd, buf, BUFF_SIZE);
+	ret = read(fd, buf, BUFF_SIZE);
+	buf[ret] = "\0";
 	ft_putnbr(ret);
 	ft_putchar('\n');
-	ft_putstr(buf);
+	ft_putstr((const char *)buf);
 	close(fd);
 	return (0);
 }
 
-int		main(void)
+int		main(int argc, char **argv)
 {
 	int		fd;
 	char	**line;
 
 	line = NULL;
-	fd = open("42", O_RDONLY);
+	(void)argc;
+	fd = open(argv[1], O_RDONLY);
 	ft_putnbr(fd);
 	ft_putchar('\n');
 	get_next_line(fd, line);

@@ -6,10 +6,11 @@
 /*   By: lelajour <lelajour@student.42.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/11/13 17:55:11 by lelajour     #+#   ##    ##    #+#       */
-/*   Updated: 2017/11/23 14:07:29 by lelajour    ###    #+. /#+    ###.fr     */
+/*   Updated: 2017/11/29 12:34:08 by lelajour    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 int		ft_strncmp(char *s1, char *s2, size_t n)

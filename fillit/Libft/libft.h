@@ -6,10 +6,11 @@
 /*   By: lelajour <lelajour@student.42.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/11/13 18:06:48 by lelajour     #+#   ##    ##    #+#       */
-/*   Updated: 2017/11/23 14:06:32 by lelajour    ###    #+. /#+    ###.fr     */
+/*   Updated: 2017/11/29 12:35:51 by lelajour    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
+
 #ifndef LIBFT_H
 # define LIBFT_H
 
@@ -24,6 +25,8 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
+int					ft_ltab(char **tab);
+char				*ft_strndup(const char *s, unsigned int n);
 void				ft_fail(void);
 char				*ft_strncat(char *dest, const char *src, size_t n);
 char				*ft_strstr(const char *haystack, const char *needle);

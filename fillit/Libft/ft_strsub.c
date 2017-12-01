@@ -6,10 +6,11 @@
 /*   By: lelajour <lelajour@student.42.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/11/13 18:06:36 by lelajour     #+#   ##    ##    #+#       */
-/*   Updated: 2017/11/23 14:08:10 by lelajour    ###    #+. /#+    ###.fr     */
+/*   Updated: 2017/11/29 12:35:09 by lelajour    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strsub(const char *s, unsigned int start, size_t len)

@@ -6,10 +6,11 @@
 /*   By: lelajour <lelajour@student.42.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/11/13 17:52:35 by lelajour     #+#   ##    ##    #+#       */
-/*   Updated: 2017/11/23 14:07:13 by lelajour    ###    #+. /#+    ###.fr     */
+/*   Updated: 2017/11/29 12:32:33 by lelajour    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	ft_putstr_fd(const char *str, int fd)

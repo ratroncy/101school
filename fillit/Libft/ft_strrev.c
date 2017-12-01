@@ -6,10 +6,11 @@
 /*   By: lelajour <lelajour@student.42.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/11/13 17:56:02 by lelajour     #+#   ##    ##    #+#       */
-/*   Updated: 2017/11/23 14:08:06 by lelajour    ###    #+. /#+    ###.fr     */
+/*   Updated: 2017/11/29 12:34:34 by lelajour    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strrev(char *str)

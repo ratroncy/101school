@@ -6,10 +6,13 @@
 /*   By: lelajour <lelajour@student.42.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/11/13 17:56:21 by lelajour     #+#   ##    ##    #+#       */
-/*   Updated: 2017/11/23 14:08:09 by lelajour    ###    #+. /#+    ###.fr     */
+/*   Updated: 2017/11/29 12:35:05 by lelajour    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
+
+#include "libft.h"
+
 char	*ft_strstr(const char *haystack, const char *needle)
 {
 	int a;
